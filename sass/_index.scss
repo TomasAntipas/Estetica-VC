@@ -2,8 +2,7 @@
 @use "variables" as variables;
 
 body {
-    font-family: variables.$fuente-body;
-    line-height: 1.6;
+$fuente-body: 'Roboto', sans-serif;
 }
 
 .encabezado {
@@ -63,8 +62,7 @@ body {
     text-align: center;
     color: #3f4f3c;
     letter-spacing: 1px;
-    font-family: variables.$fuente-titulos;
-    font-weight: 400;
+
 }
 
 
@@ -72,6 +70,7 @@ main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
+    }
 
     > img {
     display: block;
@@ -99,7 +98,7 @@ main {
     align-items: center;
     background-color: #ffffff;
     padding: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 10px;
 
     img {
@@ -113,7 +112,7 @@ main {
         line-height: 1.6;
     }
     }
-}
+
 
 
 footer {
@@ -143,6 +142,14 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     }
+}
+
+section,
+.combo,
+.sobre,
+.contacto-contenedor {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 
