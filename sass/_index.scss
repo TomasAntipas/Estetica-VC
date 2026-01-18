@@ -1,10 +1,7 @@
 
 @use "../variables" as variables;
 
-body {
-    font-family: variables.$fuente-body;
-    line-height: 1.6;
-}
+
 
 .encabezado {
     display: flex;
@@ -151,13 +148,15 @@ footer {
     }
 }
 
+body {
+    font-family: variables.$fuente-body !important;
+}
+
 h1,
 h2,
 h3,
 .titulo-promos {
-    font-family: variables.$fuente-titulos;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+    font-family: variables.$fuente-titulos !important;
 }
 
 
