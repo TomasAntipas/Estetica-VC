@@ -2,7 +2,8 @@
 @use "variables" as variables;
 
 body {
-    font-family: variables.$fuente-principal;
+    font-family: variables.$fuente-body;
+    line-height: 1.6;
 }
 
 .encabezado {
@@ -62,6 +63,8 @@ body {
     text-align: center;
     color: #3f4f3c;
     letter-spacing: 1px;
+    font-family: variables.$fuente-titulos;
+    font-weight: 400;
 }
 
 
