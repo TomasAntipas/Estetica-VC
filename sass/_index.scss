@@ -1,8 +1,9 @@
 
-@use "variables" as variables;
+@use "../variables" as variables;
 
 body {
-$fuente-body: 'Roboto', sans-serif;
+    font-family: variables.$fuente-body;
+    line-height: 1.6;
 }
 
 .encabezado {
@@ -14,6 +15,12 @@ $fuente-body: 'Roboto', sans-serif;
 
     img {
     height: 70px;
+    }
+
+    nav a {
+    font-family: variables.$fuente-body;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     }
 
     nav {
@@ -144,12 +151,13 @@ footer {
     }
 }
 
-section,
-.combo,
-.sobre,
-.contacto-contenedor {
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+h1,
+h2,
+h3,
+.titulo-promos {
+    font-family: variables.$fuente-titulos;
+    font-weight: 400;
+    letter-spacing: 0.5px;
 }
 
 
