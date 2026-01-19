@@ -143,6 +143,15 @@ footer {
     }
 }
 
+@keyframes scale {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 2;
+        background-color: variable.$verde-hover;
+    }
+}
 
 @media (max-width: 768px) {
     .encabezado-contactos {
