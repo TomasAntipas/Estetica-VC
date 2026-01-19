@@ -1,4 +1,5 @@
 
+
 @use "variables" as variables;
 
 
@@ -8,17 +9,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
-    background-color: #3f4f3c;
+    background-color: variables.$verde-oscuro;
 
     img {
     height: 70px;
     }
 
-    nav a {
-    font-family: variables.$fuente-body;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    }
+
 
     nav {
     ul {
@@ -28,9 +25,11 @@
 
         li {
         a {
+            font-family: variables.$fuente-body;
             text-decoration: none;
-            color: #ffffff;
+            color: variables.$blanco;
             font-weight: 500;
+            letter-spacing: 0.5px;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
 
@@ -41,12 +40,12 @@
             bottom: -4px;
             width: 0;
             height: 2px;
-            background-color: #cdd6a0;
+            background-color: variables.$verde-acento;
             transition: width 0.3s ease;
             }
 
             &:hover {
-            color: #cdd6a0;
+            color: variables.$verde-acento;
             transform: scale(1.05);
 
             &::after {
@@ -64,9 +63,28 @@
     font-size: 2.6rem;
     margin-bottom: 30px;
     text-align: center;
-    color: #3f4f3c;
+    color: variables.$verde-oscuro;
     letter-spacing: 1px;
+    font-family: variables.$fuente-titulos;
+}
 
+
+.btn-promos {
+    display: inline-block;
+    margin: 20px auto 0;
+    padding: 0.8rem 1.6rem;
+    background-color: variables.$verde-acento;
+    color: variables.$blanco;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+    background-color: variables.$verde-hover;
+    transform: translateY(-2px);
+    }
 }
 
 
@@ -74,7 +92,7 @@ main {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
-    }
+
 
     img {
     display: block;
@@ -87,7 +105,8 @@ main {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #3f4f3c;
+    color: variables.$verde-oscuro;
+    font-family: variables.$fuente-titulos;
     }
 
     p {
@@ -100,10 +119,11 @@ main {
     grid-template-columns: 1fr 2fr;
     gap: 30px;
     align-items: center;
-    background-color: #ffffff;
+    background-color: variables.$blanco;
     padding: 25px;
     margin-bottom: 60px;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 
     img {
         width: 100%;
@@ -116,17 +136,21 @@ main {
         line-height: 1.6;
     }
     }
-
+}
 
 
 footer {
-    background-color: #3f4f3c;
-    color: #ffffff;
+    background-color: variables.$verde-oscuro;
+    color: variables.$blanco;
     padding: 30px 20px;
     margin-top: 60px;
 
     nav {
     ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
         display: flex;
         justify-content: center;
         gap: 25px;
@@ -148,15 +172,15 @@ footer {
     }
 }
 
+
+
 body {
     font-family: variables.$fuente-body;
 }
 
-h1,
-h2,
-h3,
-.titulo-promos {
-    font-family: variables.$fuente-titulos;
+html,
+body {
+    overflow-x: hidden;
 }
 
 

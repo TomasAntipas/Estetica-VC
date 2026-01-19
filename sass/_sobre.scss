@@ -1,4 +1,3 @@
-
 @use "variables" as variables;
 
 .encabezado-sobre {
@@ -6,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
-    background-color: #3f4f3c;
+    background-color: variables.$verde-oscuro;
 
     img {
     height: 70px;
@@ -21,7 +20,7 @@
         li {
         a {
             text-decoration: none;
-            color: #ffffff;
+            color: variables.$blanco;
             font-weight: 500;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
@@ -33,12 +32,12 @@
             bottom: -4px;
             width: 0;
             height: 2px;
-            background-color: #cdd6a0;
+            background-color: variables.$verde-acento;
             transition: width 0.3s ease;
             }
 
             &:hover {
-            color: #cdd6a0;
+            color: variables.$verde-acento;
             transform: scale(1.05);
 
             &::after {
@@ -70,6 +69,8 @@ main {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 
     img {
     max-width: 380px;
@@ -84,15 +85,18 @@ main {
     }
 }
 
-
 footer {
-    background-color: #3f4f3c;
-    color: #ffffff;
+    background-color: variables.$verde-oscuro;
+    color: variables.$blanco;
     padding: 30px 20px;
     margin-top: 60px;
 
     nav {
     ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
         display: flex;
         justify-content: center;
         gap: 25px;
@@ -113,7 +117,6 @@ footer {
     font-size: 0.9rem;
     }
 }
-
 
 @media (max-width: 768px) {
     .encabezado-sobre {

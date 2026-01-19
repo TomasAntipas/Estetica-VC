@@ -1,12 +1,12 @@
-
 @use "variables" as variables;
+
 
 .encabezado-faq {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 40px;
-    background-color: #3f4f3c;
+    background-color: variables.$verde-oscuro;
 
     img {
     height: 70px;
@@ -21,7 +21,7 @@
         li {
         a {
             text-decoration: none;
-            color: #ffffff;
+            color: variables.$blanco;
             font-weight: 500;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
@@ -33,12 +33,12 @@
             bottom: -4px;
             width: 0;
             height: 2px;
-            background-color: #cdd6a0;
+            background-color: variables.$verde-acento;
             transition: width 0.3s ease;
             }
 
             &:hover {
-            color: #cdd6a0;
+            color: variables.$verde-acento;
             transform: scale(1.05);
 
             &::after {
@@ -52,6 +52,7 @@
 }
 
 
+
 main {
     max-width: 1200px;
     margin: 40px auto;
@@ -61,24 +62,21 @@ main {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #3f4f3c;
-    }
-
-    .titulo-promos {
+    color: variables.$verde-oscuro;
     font-family: variables.$fuente-titulos;
-    font-weight: 400;
-    }
+        }
 
 
     section {
-    background-color: #ffffff;
+    background-color: variables.$blanco;
     padding: 25px;
     margin-bottom: 30px;
     border-radius: 10px;
 
     h3 {
         margin-bottom: 10px;
-        color: #3f4f3c;
+        color: variables.$verde-oscuro;
+        font-family: variables.$fuente-titulos;
     }
 
     p {
@@ -88,14 +86,19 @@ main {
 }
 
 
+
 footer {
-    background-color: #3f4f3c;
-    color: #ffffff;
+    background-color: variables.$verde-oscuro;
+    color: variables.$blanco;
     padding: 30px 20px;
     margin-top: 60px;
 
     nav {
     ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
         display: flex;
         justify-content: center;
         gap: 25px;
@@ -122,5 +125,67 @@ footer {
     .encabezado-faq {
     flex-direction: column;
     gap: 15px;
+    }
+}
+
+
+footer {
+    background-color: variables.$verde-oscuro;
+    color: variables.$blanco;
+    padding: 30px 20px;
+    margin-top: 60px;
+
+    nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: 20px;
+
+        li {
+        a {
+            img {
+            width: 35px;
+            }
+        }
+        }
+    }
+    }
+
+    div {
+    text-align: center;
+    font-size: 0.9rem;
+    }
+}
+
+
+
+body {
+    font-family: variables.$fuente-body;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .encabezado {
+    flex-direction: column;
+    gap: 15px;
+    }
+
+    main section {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    p {
+        text-align: left;
+    }
     }
 }
