@@ -1,5 +1,5 @@
 
-@use "../variables" as variables;
+@use "variables" as variables;
 
 
 
@@ -76,7 +76,7 @@ main {
     padding: 0 20px;
     }
 
-    > img {
+    img {
     display: block;
     max-width: 380px;
     width: 100%;
@@ -90,7 +90,7 @@ main {
     color: #3f4f3c;
     }
 
-    > p {
+    p {
     text-align: center;
     margin-bottom: 40px;
     }
@@ -149,14 +149,14 @@ footer {
 }
 
 body {
-    font-family: variables.$fuente-body !important;
+    font-family: variables.$fuente-body;
 }
 
 h1,
 h2,
 h3,
 .titulo-promos {
-    font-family: variables.$fuente-titulos !important;
+    font-family: variables.$fuente-titulos;
 }
 
 

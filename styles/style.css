@@ -1,7 +1,4 @@
-body {
-  font-family: "Lexend Mega", sans-serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Limelight&family=Roboto:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap");
 .encabezado {
   display: flex;
   align-items: center;
@@ -11,6 +8,11 @@ body {
 }
 .encabezado img {
   height: 70px;
+}
+.encabezado nav a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 .encabezado nav ul {
   list-style: none;
@@ -55,38 +57,42 @@ main {
   margin: 40px auto;
   padding: 0 20px;
 }
-main > img {
+
+img {
   display: block;
   max-width: 380px;
   width: 100%;
   margin: 0 auto 30px;
 }
-main h2 {
+
+h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #3f4f3c;
 }
-main > p {
+
+p {
   text-align: center;
   margin-bottom: 40px;
 }
-main section {
+
+section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 30px;
   align-items: center;
   background-color: #ffffff;
   padding: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   border-radius: 10px;
 }
-main section img {
+section img {
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
 }
-main section p {
+section p {
   text-align: justify;
   line-height: 1.6;
 }
@@ -109,6 +115,17 @@ footer nav ul li a img {
 footer div {
   text-align: center;
   font-size: 0.9rem;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.titulo-promos {
+  font-family: "Limelight", cursive;
 }
 
 @media (max-width: 768px) {
@@ -491,6 +508,10 @@ main h2 {
   margin-bottom: 20px;
   color: #3f4f3c;
 }
+main .titulo-promos {
+  font-family: "Limelight", cursive;
+  font-weight: 400;
+}
 main section {
   background-color: #ffffff;
   padding: 25px;
@@ -530,6 +551,13 @@ footer div {
     flex-direction: column;
     gap: 15px;
   }
+}
+section,
+.combo,
+.sobre,
+.contacto-contenedor {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 /*# sourceMappingURL=style.css.map */
