@@ -444,6 +444,10 @@ footer div {
   margin-bottom: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
+.combo h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 .combo-contenido {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -460,13 +464,15 @@ footer div {
 }
 
 .btn-reserva {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.2rem;
   background-color: #cdd6a0;
   color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -510,9 +516,11 @@ footer img {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  .row {
+    justify-content: center;
+  }
   .row > [class^=col-] {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 50%;
   }
 }
 @media (max-width: 576px) {
