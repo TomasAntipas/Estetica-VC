@@ -71,6 +71,7 @@ main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 main img {
   display: block;
@@ -266,6 +267,15 @@ footer div {
   font-size: 0.9rem;
 }
 
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 2;
+    background-color: #55662c;
+  }
+}
 @media (max-width: 768px) {
   .encabezado-contactos {
     flex-direction: column;
@@ -530,6 +540,7 @@ main {
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 main h2 {
   text-align: center;
@@ -633,6 +644,12 @@ section,
 .contacto-contenedor {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=style.css.map */
