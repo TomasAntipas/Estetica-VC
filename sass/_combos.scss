@@ -106,32 +106,26 @@ footer {
     color: variables.$blanco;
     padding: 30px 20px;
     margin-top: 60px;
+
+
+    .container,
+    .container-fluid {
     font-size: 0.85rem;
-
-    nav {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        margin-bottom: 20px;
-
-        li {
-        a {
-            img {
-            width: 35px;
-            }
-        }
-        }
-    }
-    }
-
-    div {
-    text-align: center;
     line-height: 1.4;
+    text-align: center;
+    }
+
+    nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    }
+
+    img {
+    width: 35px;
     }
 }
 
@@ -149,14 +143,15 @@ footer {
 
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .combo-card {
+    .row > [class^="col-"] {
     margin-left: auto;
     margin-right: auto;
     }
 }
 
 @media (max-width: 576px) {
-    footer {
+    footer .container,
+    footer .container-fluid {
     font-size: 0.8rem;
     }
 }
