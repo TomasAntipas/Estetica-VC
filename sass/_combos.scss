@@ -1,7 +1,5 @@
 @use "variables" as variables;
 
-
-
 .encabezado-combos {
     display: flex;
     align-items: center;
@@ -53,6 +51,7 @@
 }
 
 
+
 .combo {
     background-color: variables.$blanco;
     padding: 2rem;
@@ -65,11 +64,16 @@
 
 
     .combo-titulo {
+    order: 1;
     text-align: center;
     margin-bottom: 1rem;
+    font-family: variables.$fuente-titulos;
+    font-size: 1.2rem;
+    color: variables.$verde-oscuro;
     }
-    
+
     img {
+    order: 2;
     width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -77,26 +81,30 @@
 
 
     p {
+    order: 3;
     line-height: 1.6;
     margin-bottom: 1rem;
     }
-}
 
-.combo .btn {
+    .btn {
+    order: 4;
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: auto; 
+    margin-top: auto;
     padding: 0.8rem 1.2rem;
 
     border-radius: 6px;
     font-weight: 500;
     transition: transform 0.2s ease;
+
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+    }
 }
 
-.combo .btn:hover {
-    transform: translateY(-2px);
-}
 
 
 footer {
@@ -104,7 +112,7 @@ footer {
     color: variables.$blanco;
     padding: 30px 20px;
     margin-top: 60px;
-    
+
     .container,
     .container-fluid {
     font-size: 0.85rem;
@@ -131,9 +139,12 @@ footer {
     .encabezado-combos {
     flex-direction: column;
     gap: 15px;
-    }
 
-}
+    nav ul {
+        justify-content: center;
+    }
+    }
+    }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
