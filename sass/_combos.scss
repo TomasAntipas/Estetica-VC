@@ -1,163 +1,155 @@
 @use "variables" as variables;
 
 .encabezado-combos {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: variables.$verde-oscuro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: variables.$verde-oscuro;
 
-    img {
-        height: 70px;
-    }
+  img {
+    height: 70px;
+  }
 
-    nav {
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
 
-            li {
-                a {
-                    text-decoration: none;
-                    color: variables.$blanco;
-                    font-weight: 500;
-                    position: relative;
-                    transition: color 0.3s ease, transform 0.3s ease;
+      li {
+        a {
+          text-decoration: none;
+          color: variables.$blanco;
+          font-weight: 500;
+          position: relative;
+          transition: color 0.3s ease, transform 0.3s ease;
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        bottom: -4px;
-                        width: 0;
-                        height: 2px;
-                        background-color: variables.$verde-acento;
-                        transition: width 0.3s ease;
-                    }
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0;
+            height: 2px;
+            background-color: variables.$verde-acento;
+            transition: width 0.3s ease;
+          }
 
-                    &:hover {
-                        color: variables.$verde-acento;
-                        transform: scale(1.05);
+          &:hover {
+            color: variables.$verde-acento;
+            transform: scale(1.05);
 
-                        &::after {
-                            width: 100%;
-                        }
-                    }
-                }
+            &::after {
+              width: 100%;
             }
+          }
         }
+      }
     }
+  }
 }
-
-
 
 .combo {
-    background-color: variables.$blanco;
-    padding: 2rem;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  background-color: variables.$blanco;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
+  .combo-titulo {
+    order: 1;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: variables.$fuente-titulos;
+    font-size: 1.2rem;
+    color: variables.$verde-oscuro;
+  }
 
-    .combo-titulo {
-        order: 1;
-        text-align: center;
-        margin-bottom: 1rem;
-        font-family: variables.$fuente-titulos;
-        font-size: 1.2rem;
-        color: variables.$verde-oscuro;
+  img {
+    order: 2;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    order: 3;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    order: 4;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
     }
-
-    img {
-        order: 2;
-        width: 100%;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-    }
-
-
-    p {
-        order: 3;
-        line-height: 1.6;
-        margin-bottom: 1rem;
-    }
-
-    .btn {
-        order: 4;
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-top: auto;
-        padding: 0.8rem 1.2rem;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: transform 0.2s ease;
-
-        &:hover {
-            transform: translateY(-2px);
-        }
-    }
+  }
 }
-
 
 footer {
-    background-color: variables.$verde-oscuro;
-    color: variables.$blanco;
-    padding: 30px 20px;
-    margin-top: 60px;
+  background-color: variables.$verde-oscuro;
+  color: variables.$blanco;
+  padding: 30px 20px;
+  margin-top: 60px;
 
-    .container,
-    .container-fluid {
-        font-size: 0.85rem;
-        line-height: 1.4;
-        text-align: center;
-    }
+  .container,
+  .container-fluid {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+  }
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 20px;
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-    }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
 
-    img {
-        width: 35px;
-    }
+  img {
+    width: 35px;
+  }
 }
-
 
 @media (max-width: 767px) {
-    .encabezado-combos {
-        flex-direction: column;
-        gap: 15px;
+  .encabezado-combos {
+    flex-direction: column;
+    gap: 15px;
 
-        nav {
-            margin: 0 auto;
-        }
+    nav {
+      margin: 0 auto;
     }
+  }
 }
-
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .row {
-        justify-content: center;
-    }
+  .row {
+    justify-content: center;
+  }
 
-    .row > [class^="col-"] {
-        max-width: 50%;
-    }
+  .row > [class^="col-"] {
+    max-width: 50%;
+  }
 }
-
 
 @media (max-width: 576px) {
     footer .container,
     footer .container-fluid {
-        font-size: 0.8rem;
+    font-size: 0.8rem;
     }
 }
