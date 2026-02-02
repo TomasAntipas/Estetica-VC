@@ -126,7 +126,7 @@ main section img {
   border-radius: 10px;
 }
 main section p {
-  text-align: justify;
+  text-align: center;
   line-height: 1.6;
 }
 
@@ -172,7 +172,7 @@ body {
     text-align: center;
   }
   main section p {
-    text-align: left;
+    text-align: center;
   }
 }
 .encabezado-contactos {
@@ -455,20 +455,26 @@ footer div {
   height: 100%;
 }
 .combo .combo-titulo {
+  order: 1;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Limelight", cursive;
+  font-size: 1.2rem;
+  color: #3f4f3c;
 }
 .combo img {
+  order: 2;
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
 }
 .combo p {
+  order: 3;
   line-height: 1.6;
   margin-bottom: 1rem;
 }
-
 .combo .btn {
+  order: 4;
   display: block;
   width: 100%;
   text-align: center;
@@ -478,7 +484,6 @@ footer div {
   font-weight: 500;
   transition: transform 0.2s ease;
 }
-
 .combo .btn:hover {
   transform: translateY(-2px);
 }
@@ -511,6 +516,9 @@ footer img {
   .encabezado-combos {
     flex-direction: column;
     gap: 15px;
+  }
+  .encabezado-combos nav {
+    margin: 0 auto;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
