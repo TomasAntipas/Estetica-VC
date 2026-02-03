@@ -506,6 +506,7 @@ footer nav ul {
   margin: 0 0 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 25px;
 }
 footer img {
@@ -519,6 +520,14 @@ footer img {
   }
   .encabezado-combos nav {
     margin: 0 auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .row {
+    justify-content: center;
+  }
+  .row > [class^=col-] {
+    max-width: 50%;
   }
 }
 @media (max-width: 576px) {

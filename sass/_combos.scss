@@ -118,6 +118,7 @@ footer {
     margin: 0 0 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 25px;
   }
 
@@ -141,7 +142,7 @@ footer {
   .row {
     justify-content: center;
   }
-
+  
   .row > [class^="col-"] {
     max-width: 50%;
   }
