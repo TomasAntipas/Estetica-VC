@@ -1,27 +1,35 @@
 @use "variables" as variables;
 
 .encabezado-sobre {
+    background-color: variables.$verde-oscuro;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    background-color: variables.$verde-oscuro;
+
 
     img {
-    height: 70px;
+    height: 65px;
+    flex-shrink: 0;
     }
 
     nav {
     ul {
         list-style: none;
         display: flex;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
 
         li {
         a {
+            font-family: variables.$fuente-body;
             text-decoration: none;
             color: variables.$blanco;
             font-weight: 500;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
 
@@ -95,19 +103,14 @@ footer {
     ul {
         list-style: none;
         padding: 0;
-        margin: 0;
-
+        margin: 0 0 20px;
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-bottom: 20px;
 
-        li {
-        a {
-            img {
-            width: 35px;
-            }
-        }
+
+        li a img {
+        width: 35px;
         }
     }
     }
@@ -118,9 +121,68 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+body {
+    font-family: variables.$fuente-body;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 480px) {
     .encabezado-sobre {
-    flex-direction: column;
-    gap: 15px;
+    padding: 10px 15px;
+    }
+
+    .encabezado-sobre img {
+    height: 45px;
+    }
+
+    .encabezado-sobre nav ul {
+    gap: 12px;
+    }
+
+    .encabezado-sobre nav ul li a {
+    font-size: 0.8rem;
+    }
+
+    .sobre {
+    padding: 20px;
+    }
+
+    .sobre p {
+    text-align: left;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .encabezado-sobre {
+    padding: 12px 25px;
+    }
+
+    .encabezado-sobre img {
+    height: 55px;
+    }
+
+    .encabezado-sobre nav ul {
+    gap: 20px;
+    }
+
+    .encabezado-sobre nav ul li a {
+    font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .encabezado-sobre {
+    padding: 15px 30px;
+    }
+
+    .encabezado-sobre nav ul {
+    gap: 26px;
     }
 }

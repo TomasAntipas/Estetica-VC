@@ -1,27 +1,35 @@
 @use "variables" as variables;
 
 .encabezado-combos {
+  background-color: variables.$verde-oscuro;
+  padding: 15px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 40px;
-  background-color: variables.$verde-oscuro;
+
 
   img {
-    height: 70px;
+    height: 65px;
+    flex-shrink: 0;
   }
 
   nav {
     ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      align-items: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
 
       li {
         a {
+          font-family: variables.$fuente-body;
           text-decoration: none;
           color: variables.$blanco;
           font-weight: 500;
+          letter-spacing: 0.5px;
+          white-space: nowrap;
           position: relative;
           transition: color 0.3s ease, transform 0.3s ease;
 
@@ -61,7 +69,7 @@
   height: 100%;
 
   .combo-titulo {
-    order: 1;
+
     text-align: center;
     margin-bottom: 1rem;
     font-family: variables.$fuente-titulos;
@@ -70,24 +78,24 @@
   }
 
   img {
-    order: 2;
+
     width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
   }
 
   p {
-    order: 3;
+
     line-height: 1.6;
     margin-bottom: 1rem;
   }
 
   .btn {
-    order: 4;
+    margin-top: auto;
     display: block;
     width: 100%;
     text-align: center;
-    margin-top: auto;
+
     padding: 0.8rem 1.2rem;
     border-radius: 6px;
     font-weight: 500;
@@ -127,30 +135,77 @@ footer {
   }
 }
 
-@media (max-width: 767px) {
-  .encabezado-combos {
-    flex-direction: column;
-    gap: 15px;
+body {
+  font-family: variables.$fuente-body;
+}
 
-    nav {
-      margin: 0 auto;
-    }
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+@media (max-width: 480px) {
+  .encabezado-combos {
+    padding: 10px 15px;
+  }
+
+  .encabezado-combos img {
+    height: 45px;
+  }
+
+  .encabezado-combos nav ul {
+    gap: 12px;
+  }
+
+  .encabezado-combos nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  .combo {
+    padding: 1.5rem;
+  }
+
+  footer .container,
+  footer .container-fluid {
+    font-size: 0.8rem;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .encabezado-combos {
+    padding: 12px 25px;
+  }
+
+  .encabezado-combos img {
+    height: 55px;
+  }
+
+  .encabezado-combos nav ul {
+    gap: 20px;
+  }
+
+  .encabezado-combos nav ul li a {
+    font-size: 0.9rem;
+  }
+
   .row {
     justify-content: center;
   }
-  
+
   .row > [class^="col-"] {
     max-width: 50%;
   }
 }
 
-@media (max-width: 576px) {
-    footer .container,
-    footer .container-fluid {
-    font-size: 0.8rem;
-    }
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .encabezado-combos {
+    padding: 15px 30px;
+  }
+
+  .encabezado-combos nav ul {
+    gap: 26px;
+  }
 }

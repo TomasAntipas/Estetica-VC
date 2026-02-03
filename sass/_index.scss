@@ -5,14 +5,16 @@
 
 
 .encabezado {
+    background-color: variables.$verde-oscuro;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    background-color: variables.$verde-oscuro;
+
 
     img {
-    height: 70px;
+    height: 65px;
+    flex-shrink: 0;
     }
 
 
@@ -21,7 +23,10 @@
     ul {
         list-style: none;
         display: flex;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
 
         li {
         a {
@@ -30,6 +35,7 @@
             color: variables.$blanco;
             font-weight: 500;
             letter-spacing: 0.5px;
+            white-space: nowrap;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
 
@@ -53,7 +59,7 @@
             }
             }
         }
-        }
+        } 
     }
     }
 }
@@ -150,19 +156,14 @@ footer {
     ul {
         list-style: none;
         padding: 0;
-        margin: 0;
-
+        margin: 0 0 20px;
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-bottom: 20px;
 
-        li {
-        a {
-            img {
-            width: 35px;
-            }
-        }
+
+        li a img {
+        width: 35px;
         }
     }
     }
@@ -185,18 +186,51 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .encabezado {
-    flex-direction: column;
-    gap: 15px;
+    padding: 10px 15px;
     }
 
-    main section {
-    grid-template-columns: 1fr;
-    text-align: center;
-
-    p {
-        text-align: center;
+    .encabezado img {
+    height: 45px;
     }
+
+    .encabezado nav ul {
+    gap: 12px;
+    }
+
+    .encabezado nav ul li a {
+    font-size: 0.8rem;
     }
 }
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .encabezado {
+    padding: 12px 25px;
+    }
+
+    .encabezado img {
+    height: 55px;
+    }
+
+    .encabezado nav ul {
+    gap: 20px;
+    }
+
+    .encabezado nav ul li a {
+    font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .encabezado {
+    padding: 15px 30px;
+    }
+
+    .encabezado nav ul {
+    gap: 26px;
+    }
+}
+

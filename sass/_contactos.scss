@@ -2,14 +2,16 @@
 
 
 .encabezado-contactos {
+    background-color: variables.$verde-oscuro;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px;
-    background-color: variables.$verde-oscuro;
+
 
     img {
-    height: 70px;
+    height: 65px;
+    flex-shrink: 0;
     }
 
     nav {
@@ -17,13 +19,19 @@
 
         list-style: none;
         display: flex;
-        gap: 20px;
+        align-items: center;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
 
         li {
         a {
+            font-family: variables.$fuente-body;
             text-decoration: none;
             color: variables.$blanco;
             font-weight: 500;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
             position: relative;
             transition: color 0.3s ease, transform 0.3s ease;
 
@@ -121,19 +129,14 @@ footer {
     ul {
         list-style: none;
         padding: 0;
-        margin: 0;
-
+        margin: 0 0 20px;
         display: flex;
         justify-content: center;
         gap: 25px;
-        margin-bottom: 20px;
 
-        li {
-        a {
-            img {
-            width: 35px;
-            }
-        }
+        
+        li a img {
+        width: 35px;
         }
     }
     }
@@ -144,24 +147,68 @@ footer {
     }
 }
 
-@keyframes scale {
-    0%{
-        scale: 1;
-    }
-    100%{
-        scale: 2;
-        background-color: variables.$verde-hover;
-    }
+body {
+    font-family: variables.$fuente-body;
 }
 
-@media (max-width: 768px) {
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 480px) {
     .encabezado-contactos {
-    flex-direction: column;
-    gap: 15px;
+    padding: 10px 15px;
+    }
+
+    .encabezado-contactos img {
+    height: 45px;
+    }
+
+    .encabezado-contactos nav ul {
+    gap: 12px;
+    }
+
+    .encabezado-contactos nav ul li a {
+    font-size: 0.8rem;
     }
 
     .contacto-contenedor {
     grid-template-columns: 1fr;
-    text-align: center;
     }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .encabezado-contactos {
+    padding: 12px 25px;
     }
+
+    .encabezado-contactos img {
+    height: 55px;
+    }
+
+    .encabezado-contactos nav ul {
+    gap: 20px;
+    }
+
+    .encabezado-contactos nav ul li a {
+    font-size: 0.9rem;
+    }
+
+    .contacto-contenedor {
+    grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .encabezado-contactos {
+    padding: 15px 30px;
+    }
+
+    .encabezado-contactos nav ul {
+    gap: 26px;
+    }
+}
